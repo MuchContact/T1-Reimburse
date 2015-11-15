@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "local" do |local|
     local.vm.box = "https://github.com/2creatives/vagrant-centos/releases/download/v6.4.2/centos64-x86_64-20140116.box"
     # local.vm.box = "puphpet/ubuntu1404-x64"
-    local.vm.network "forwarded_port", host: 3306, guest: 3306
+    local.vm.network "forwarded_port", host: 3307, guest: 3307
     local.vm.network "forwarded_port", host: 8080, guest: 8080
     local.vm.network "forwarded_port", host: 10000, guest: 80
     local.vm.network "forwarded_port", host: 10001, guest: 81

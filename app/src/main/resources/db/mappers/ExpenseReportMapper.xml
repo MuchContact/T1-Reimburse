@@ -10,5 +10,5 @@
     </resultMap>
     <insert id="createNewExpenseReport" keyProperty="report.id" useGeneratedKeys="true">insert into expense_report(title) VALUES (#{report.name})</insert>
     <insert id="addExpense">INSERT INTO expense_report_items(reportId, expenseId) VALUES (#{report.id}, #{expense.id})</insert>
-    <select id="getExpenseReportById" resultMap="result_map">select id, title from expense_report</select>
+    <select id="getExpenseReportById" resultMap="result_map">select id, title from expense_report where id=#{id}</select>
 </mapper>
